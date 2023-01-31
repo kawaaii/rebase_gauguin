@@ -280,7 +280,7 @@ config TOUCHSCREEN_CYTTSP4_SPI
 config TOUCHSCREEN_DA9034
 	tristate "Touchscreen support for Dialog Semiconductor DA9034"
 	depends on PMIC_DA903X
-	default y
+	default n
 	help
 	  Say Y here to enable the support for the touchscreen found
 	  on Dialog Semiconductor DA9034 PMIC.
@@ -813,7 +813,7 @@ config TOUCHSCREEN_WM97XX
 config TOUCHSCREEN_WM9705
 	bool "WM9705 Touchscreen interface support"
 	depends on TOUCHSCREEN_WM97XX
-	default y
+	default n
 	help
 	  Say Y here to enable support for the Wolfson Microelectronics
 	  WM9705 touchscreen controller.
@@ -821,7 +821,7 @@ config TOUCHSCREEN_WM9705
 config TOUCHSCREEN_WM9712
 	bool "WM9712 Touchscreen interface support"
 	depends on TOUCHSCREEN_WM97XX
-	default y
+	default n
 	help
 	  Say Y here to enable support for the Wolfson Microelectronics
 	  WM9712 touchscreen controller.
@@ -829,7 +829,7 @@ config TOUCHSCREEN_WM9712
 config TOUCHSCREEN_WM9713
 	bool "WM9713 Touchscreen interface support"
 	depends on TOUCHSCREEN_WM97XX
-	default y
+	default n
 	help
 	  Say Y here to enable support for the Wolfson Microelectronics
 	  WM9713 touchscreen controller.
@@ -930,92 +930,92 @@ config TOUCHSCREEN_MC13783
 	  module will be called mc13783_ts.
 
 config TOUCHSCREEN_USB_EGALAX
-	default y
+	default n
 	bool "eGalax, eTurboTouch CT-410/510/700 device support" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 
 config TOUCHSCREEN_USB_PANJIT
-	default y
+	default n
 	bool "PanJit device support" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 
 config TOUCHSCREEN_USB_3M
-	default y
+	default n
 	bool "3M/Microtouch EX II series device support" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 
 config TOUCHSCREEN_USB_ITM
-	default y
+	default n
 	bool "ITM device support" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 
 config TOUCHSCREEN_USB_ETURBO
-	default y
+	default n
 	bool "eTurboTouch (non-eGalax compatible) device support" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 
 config TOUCHSCREEN_USB_GUNZE
-	default y
+	default n
 	bool "Gunze AHL61 device support" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 
 config TOUCHSCREEN_USB_DMC_TSC10
-	default y
+	default n
 	bool "DMC TSC-10/25 device support" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 
 config TOUCHSCREEN_USB_IRTOUCH
-	default y
+	default n
 	bool "IRTOUCHSYSTEMS/UNITOP device support" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 
 config TOUCHSCREEN_USB_IDEALTEK
-	default y
+	default n
 	bool "IdealTEK URTC1000 device support" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 
 config TOUCHSCREEN_USB_GENERAL_TOUCH
-	default y
+	default n
 	bool "GeneralTouch Touchscreen device support" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 
 config TOUCHSCREEN_USB_GOTOP
-	default y
+	default n
 	bool "GoTop Super_Q2/GogoPen/PenPower tablet device support" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 
 config TOUCHSCREEN_USB_JASTEC
-	default y
+	default n
 	bool "JASTEC/DigiTech DTR-02U USB touch controller device support" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 
 config TOUCHSCREEN_USB_ELO
-	default y
+	default n
 	bool "Elo TouchSystems 2700 IntelliTouch controller device support" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 
 config TOUCHSCREEN_USB_E2I
-	default y
+	default n
 	bool "e2i Touchscreen controller (e.g. from Mimo 740)" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 
 config TOUCHSCREEN_USB_ZYTRONIC
-	default y
+	default n
 	bool "Zytronic controller" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 
 config TOUCHSCREEN_USB_ETT_TC45USB
-	default y
+	default n
 	bool "ET&T USB series TC4UM/TC5UH touchscreen controller support" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 
 config TOUCHSCREEN_USB_NEXIO
-	default y
+	default n
 	bool "NEXIO/iNexio device support" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 
 config TOUCHSCREEN_USB_EASYTOUCH
-	default y
+	default n
 	bool "EasyTouch USB Touch controller device support" if EXPERT
 	depends on TOUCHSCREEN_USB_COMPOSITE
 	help
@@ -1316,7 +1316,7 @@ config TOUCHSCREEN_ROHM_BU21023
 config TOUCHSCREEN_ST
 	tristate "STMicroelectronics Touchscreen Driver"
 	depends on I2C
-	default y
+	default n
 	help
 	  Say Y here if you have a STMicroelectronics Touchscreen.
 
@@ -1329,7 +1329,7 @@ source "drivers/input/touchscreen/st/Kconfig"
 config TOUCHSCREEN_SYNAPTICS_DSX
 	bool "Synaptics DSX Touchscreen Driver"
 	depends on I2C
-	default y
+	default n
 	help
 	  Say Y here if you have a Synaptics Touchscreen.
 
@@ -1350,7 +1350,7 @@ config SPI_XIAOMI_TP
 config TOUCHSCREEN_SYNAPTICS_TCM
 	bool "Synaptics TCM Touchscreen Driver"
 	depends on I2C
-	default y
+	default n
 	help
 	  Say Y here if you have a Synaptics Touchscreen.
 
