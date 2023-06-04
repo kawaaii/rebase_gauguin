@@ -4,7 +4,6 @@
  * Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
  * Copyright (C) 2021 XiaoMi, Inc.
  */
-#define DEBUG
 #include <linux/module.h>
 #include <linux/slab.h>
 #include <linux/platform_device.h>
