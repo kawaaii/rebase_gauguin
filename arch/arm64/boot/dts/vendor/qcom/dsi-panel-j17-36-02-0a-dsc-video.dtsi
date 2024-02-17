@@ -235,6 +235,8 @@
 
 &dsi_j17_36_02_0a_video {
         qcom,esd-check-enabled;
+	mi,mdss-dsi-panel-status-value-ignore;
+	mi,esd-check-interval = <3000>;
         qcom,mdss-dsi-panel-status-check-mode = "reg_read";
         qcom,mdss-dsi-panel-status-command = [06 01 00 01 00 00 01 0a];
         qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";

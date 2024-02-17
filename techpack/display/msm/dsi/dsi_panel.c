@@ -3291,6 +3291,11 @@ int dsi_panel_parse_esd_reg_read_configs(struct dsi_panel *panel)
 				esd_config->groups * status_len);
 	}
 
+	/* Ignore status value, read reg is only to trigger
+	 * esd err irq. (GAUGUIN-2131) */
+	esd_config->status_value_ignore = utils->read_bool(utils->data,
+		"mi,mdss-dsi-panel-status-value-ignore");
+
 	return 0;
 
 error4:
@@ -3332,7 +3337,9 @@ static int dsi_panel_parse_esd_config(struct dsi_panel *panel)
 		else
 			gpio_direction_input(esd_config->esd_err_irq_gpio);
 
-		return 0;
+		/* More than one ESD detection method is allowed to
+		 * make it more reliable. (GAUGUIN-2131) */
+		// return 0;
 	}
 
 	esd_config->esd_enabled = utils->read_bool(utils->data,
@@ -3380,6 +3387,9 @@ static int dsi_panel_parse_esd_config(struct dsi_panel *panel)
 	} else if (panel->esd_config.status_mode ==  ESD_MODE_PANEL_TE) {
 		esd_mode = "te_check";
 	}
+
+	utils->read_u32(utils->data, "mi,esd-check-interval",
+			&esd_config->esd_status_interval);
 
 	DSI_DEBUG("ESD enabled with mode: %s\n", esd_mode);
 

@@ -161,6 +161,7 @@ enum esd_check_status_mode {
 
 struct drm_panel_esd_config {
 	bool esd_enabled;
+	bool status_value_ignore;
 
 	enum esd_check_status_mode status_mode;
 	struct dsi_panel_cmd_set status_cmd;
@@ -170,6 +171,7 @@ struct drm_panel_esd_config {
 	u8 *return_buf;
 	u8 *status_buf;
 	u32 groups;
+	u32 esd_status_interval;
 	int esd_err_irq;
 	int esd_err_irq_flags;
 	int esd_err_irq_gpio;
