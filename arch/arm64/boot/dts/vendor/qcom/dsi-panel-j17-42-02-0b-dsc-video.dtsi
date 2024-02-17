@@ -206,6 +206,7 @@
 
 &dsi_j17_42_02_0b_video {
         qcom,esd-check-enabled;
+	mi,is-tddi-flag;
 	mi,mdss-dsi-panel-status-value-ignore;
 	mi,esd-check-interval = <3000>;
         qcom,mdss-dsi-panel-status-check-mode = "reg_read";
